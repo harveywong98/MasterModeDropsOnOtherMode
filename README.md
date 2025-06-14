@@ -22,6 +22,6 @@ This mod theoretically compatible with most other mods.
 - **0.3:** basic release
 
 ## Feedback and Support
-- If you encounter any bugs or issues while using this mod, please [open an issue](https://github.com/harveywong98/MasterModeDropsOnOtherMode/issues) on our GitHub repository. Provide as much detail as possible, including the steps to reproduce the problem, your game version, and tModLoader version.
+- If you encounter any bugs or issues while using this mod, please [open an issue](https://github.com/harveywong98/MasterModeDropsOnOtherMode/issues) on my GitHub repository. Provide as much detail as possible, including the steps to reproduce the problem, your game version, and tModLoader version.
 - If you have suggestions for new features or improvements, feel free to share them in the issues section as well.
 
