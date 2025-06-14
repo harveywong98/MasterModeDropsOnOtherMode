@@ -17,7 +17,28 @@ namespace MasterModeDropsOnOtherMode
 
 		public override void Unload() {}
 	}
-	
+
+	public class VariableDropRateCondition(double minRate, double maxRate) : IItemDropRuleCondition
+	{
+		public bool CanDrop(DropAttemptInfo info)
+		{
+			if (info.IsInSimulation)
+				return false;
+			// 在指定范围内生成随机概率
+			var actualRate = minRate + (maxRate - minRate) * info.rng.NextDouble();
+			return info.rng.NextDouble() < actualRate;
+		}
+
+		public bool CanShowItemDropInUI() => true;
+
+		public string GetConditionDescription()
+		{
+			var minPercent = (int)(minRate * 100);
+			var maxPercent = (int)(maxRate * 100);
+			return $"{minPercent}% to {maxPercent}% chance";
+		}
+	}
+
 	public class MyGlobalNpc : GlobalNPC
 	{
 		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot) {
@@ -127,7 +148,10 @@ namespace MasterModeDropsOnOtherMode
 					break;
 				case NPCID.MourningWood:
 					npcLoot.Add(ItemDropRule.Common(ItemID.MourningWoodMasterTrophy));
-					npcLoot.Add(ItemDropRule.Common(ItemID.SpookyWoodMountItem,4));
+					npcLoot.Add(ItemDropRule.ByCondition(
+						new VariableDropRateCondition(0.0625, 0.25),
+						ItemID.SpookyWoodMountItem
+					));
 					break;
 				case NPCID.Pumpking:
 					npcLoot.Add(ItemDropRule.Common(ItemID.PumpkingPetItem));
