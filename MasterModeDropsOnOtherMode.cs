@@ -28,19 +28,19 @@ namespace MasterModeDropsOnOtherMode
 				return;
 			}
 			
-			if (System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
+			if (System.Array.IndexOf([NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail], npc.type) > -1)
 			{
 				LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EaterOfWorldsPetItem));
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.EaterofWorldsMasterTrophy));
 				npcLoot.Add(leadingConditionRule);
-			} else if (System.Array.IndexOf(new int[] { NPCID.TheDestroyerBody, NPCID.TheDestroyer, NPCID.TheDestroyerTail }, npc.type) > -1) {
+			} else if (System.Array.IndexOf([NPCID.TheDestroyerBody, NPCID.TheDestroyer, NPCID.TheDestroyerTail], npc.type) > -1) {
 				LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DestroyerPetItem));
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.DestroyerMasterTrophy));
 				npcLoot.Add(leadingConditionRule);
-			} else if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism) {
-				LeadingConditionRule leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
+			} else if (npc.type is NPCID.Retinazer or NPCID.Spazmatism) {
+				var leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.TwinsPetItem));
 				leadingConditionRule.OnSuccess(ItemDropRule.Common(ItemID.TwinsMasterTrophy));
 				npcLoot.Add(leadingConditionRule);
