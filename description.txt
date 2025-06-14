@@ -1,0 +1,13 @@
+### Mod Name
+MasterModeDropsOnOtherMode
+
+### Mod Overview
+This mod allows you to obtain master mode - exclusive drops even when not playing in master mode. In classic and expert modes, you can also experience the unique loot from master mode, enriching the gameplay.
+
+### Mod Name
+MasterModeDropsOnOtherMode
+
+### Feedback
+If you encounter any issues or have feedback during use, please go to this mod's GitHub repository to submit an Issue.
+
+
