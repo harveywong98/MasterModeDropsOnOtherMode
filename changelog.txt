@@ -1,0 +1,1 @@
+﻿Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
