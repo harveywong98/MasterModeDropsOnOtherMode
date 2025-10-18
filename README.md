@@ -35,3 +35,9 @@ This mod theoretically compatible with most other mods.
 ## Feedback and Support
 Have a favorite mod you'd like to see supported? Found a bug? Have a great idea for a new feature?
 Feel free to leave a comment on the Steam Workshop page or, for more detailed feedback, open an issue on my [GitHub repository](https://github.com/harveywong98/MasterModeDropsOnOtherMode). Your suggestions are always welcome!
+
+## Acknowledgements
+<p align="left">
+    <img src="Rider.png" alt="Rider" width="240">
+</p>
+A special thanks to JetBrains for providing a free license for their powerful IDE, Rider. The development of this mod was made significantly easier and more enjoyable thanks to their support for the open-source community.
