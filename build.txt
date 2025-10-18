@@ -1,3 +1,7 @@
 displayName = Master Mode Drops On Other Mode
-author = harvey
-version = 1.0.1
+author = Harvey
+version = 1.1.0
+weakReferences = Redemption
+homepage = https://github.com/harveywong98/MasterModeDropsOnOtherMode
+includeSource = true
+side = Server

@@ -1,1 +1,25 @@
+Configs: {
+	ModConfig: {
+		DisplayName: Mod Config
 
+		Headers: {
+			VanillaBossDrops: Vanilla Boss Drops Header
+			ModdedBossDrops: Modded Boss Drops Header
+		}
+
+		EnableVanillaBossDrops: {
+			Label: Enable Vanilla Boss Master Drops
+			Tooltip: If true, vanilla bosses will drop their Master Mode items in non-Master worlds.
+		}
+
+		EnableModdedBossDrops: {
+			Label: Enable Modded Boss Master Drops
+			Tooltip: If true, bosses from supported mods will drop their Master Mode items in non-Master worlds.
+		}
+
+		EnableRedemptionDrops: {
+			Label: Enable Redemption Drops
+			Tooltip: A specific toggle for Redemption mod drops. Requires the master toggle above to be enabled.
+		}
+	}
+}

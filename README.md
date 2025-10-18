@@ -4,11 +4,15 @@
 </p>
 
 ## Overview
-MasterModeDropsOnOtherMode is a Terraria mod that allows players to obtain master mode - exclusive drops even when not playing in master mode. This enriches the gameplay experience in classic and expert modes by offering unique loot from the master mode.
+MasterModeDropsOnOtherMode is a simple but essential mod that allows all Master Mode exclusive items—such as special pets and mounts be obtainable in any difficulty.
 
 ## Features
 **Cross - mode Drops**: Defeat bosses and enemies that originally only have special drops in master mode in classic or expert modes, and you'll have a chance to get those exclusive master - mode items.
 
+## Supported Content 
+This mod currently adds Master Mode drops for the following content:
+- Terraria (Vanilla)
+- Redemption Mod (v0.8.0.4083)
 
 ## Usage
 - Enter the game and choose either classic or expert mode.
@@ -18,10 +22,16 @@ MasterModeDropsOnOtherMode is a Terraria mod that allows players to obtain maste
 This mod theoretically compatible with most other mods.
 
 ## Changelog
-- **0.4:** add icon
-- **0.3:** basic release
+- **1.1.0** 
+  - Redemption mod (0.8.0.4083) support.
+  - Prevent duplicate item drops in master mode.
+- **1.0.0**
+  - Fix bug.
+- **0.4.0**
+  - Added a new workshop icon.
+- **0.3.0**
+  - Initial release.
 
 ## Feedback and Support
-- If you encounter any bugs or issues while using this mod, please [open an issue](https://github.com/harveywong98/MasterModeDropsOnOtherMode/issues) on my GitHub repository. Provide as much detail as possible, including the steps to reproduce the problem, your game version, and tModLoader version.
-- If you have suggestions for new features or improvements, feel free to share them in the issues section as well.
-
+Have a favorite mod you'd like to see supported? Found a bug? Have a great idea for a new feature?
+Feel free to leave a comment on the Steam Workshop page or, for more detailed feedback, open an issue on my [GitHub repository](https://github.com/harveywong98/MasterModeDropsOnOtherMode). Your suggestions are always welcome!
