@@ -1,5 +1,3 @@
-[h1] MasterModeDropsOnOtherMode [/h1]
-
 [h1] Overview [/h1]
 MasterModeDropsOnOtherMode is a simple but essential mod that allows all Master Mode exclusive items—such as special pets and mounts be obtainable in any difficulty.
 
@@ -10,24 +8,25 @@ Cross - mode Drops: Defeat bosses and enemies that originally only have special 
 [list]
     [*] Terraria (Vanilla)
     [*] Redemption Mod (v0.8.0.4083)
-[list]
+[/list]
 
 [h1] Usage [/h1]
 [list]
     [*] Enter the game and choose either classic or expert mode.
     [*] Defeat bosses and enemies as usual. Keep an eye on your loot drops, as you might find master - mode exclusive items!
-[list]
+[/list]
 
 [h1] Changelog [/h1]
-- 1.1.0: Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
-- 1.0.0: fix bug
-- 0.4.0: add icon
-- 0.3.0: basic release
+[list]
+    [*] 1.1.*: Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
+    [*] 1.0.*: fix bug
+    [*] 0.4.0: add icon
+    [*] 0.3.0: basic release
+[/list]
 
 [h1] Feedback and Support [/h1]
 Have a favorite mod you'd like to see supported? Found a bug? Have a great idea for a new feature?
 Feel free to leave a comment on the Steam Workshop page or, for more detailed feedback, open an issue on my [url=https://github.com/harveywong98/MasterModeDropsOnOtherMode] GitHub repository [/url]. Your suggestions are always welcome!
 
-## Acknowledgements
-
+[h1] Acknowledgements [/h1]
 A special thanks to JetBrains for providing a free license for their powerful IDE, Rider. The development of this mod was made significantly easier and more enjoyable thanks to their support for the open-source community.
