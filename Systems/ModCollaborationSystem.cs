@@ -12,5 +12,6 @@ public static class ModCollaborationSystem
         // var config = ModContent.GetInstance<ModConfig>();
         // if (config.EnableRedemptionDrops && ModLoader.HasMod("Redemption"))
         if (ModLoader.HasMod("Redemption")) RedemptionLootHandler.ModifyLoot(npc, npcLoot);
+        if (ModLoader.HasMod("SOTS")) SotsLootHandler.ModifyLoot(npc, npcLoot);
     }
 }

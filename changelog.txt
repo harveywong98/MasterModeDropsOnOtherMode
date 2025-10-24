@@ -1,1 +1,1 @@
-﻿Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
+﻿Secrets Of The Shadows mod (0.25.0.4) support.

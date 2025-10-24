@@ -6,8 +6,9 @@ Cross - mode Drops: Defeat bosses and enemies that originally only have special 
 
 [h1] Supported Content [/h1]
 [list]
-    [*] Terraria (Vanilla)
+    [*] Terraria (Vanilla v1.4.4.9)
     [*] Redemption Mod (v0.8.0.4083)
+    [*] Secrets Of The Shadows Mod (v0.25.0.4)
 [/list]
 
 [h1] Usage [/h1]
@@ -18,7 +19,8 @@ Cross - mode Drops: Defeat bosses and enemies that originally only have special 
 
 [h1] Changelog [/h1]
 [list]
-    [*] 1.1.*: Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
+    [*] 1.1.7: Secrets Of The Shadows mod (v0.25.0.4) support
+    [*] 1.1.5: Redemption mod (0.8.0.4083) support, prevent duplicate item drops in master mode
     [*] 1.0.*: fix bug
     [*] 0.4.0: add icon
     [*] 0.3.0: basic release

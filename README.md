@@ -22,8 +22,10 @@ This mod currently adds Master Mode drops for the following content:
 This mod theoretically compatible with most other mods.
 
 ## Changelog
-- **1.1.0** 
-  - Redemption mod (0.8.0.4083) support.
+- **1.1.7**
+  - Secrets Of The Shadows mod (v0.25.0.4) support.
+- **1.1.5** 
+  - Redemption mod (v0.8.0.4083) support.
   - Prevent duplicate item drops in master mode.
 - **1.0.0**
   - Fix bug.
