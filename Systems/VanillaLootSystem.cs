@@ -15,139 +15,138 @@ public static class VanillaLootSystem
                 npc.type) > -1)
         {
             LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EaterOfWorldsPetItem));
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EaterofWorldsMasterTrophy));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.EaterOfWorldsPetItem));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.EaterofWorldsMasterTrophy));
             npcLoot.Add(leadingConditionRule);
         }
         else if (Array.IndexOf([NPCID.TheDestroyerBody, NPCID.TheDestroyer, NPCID.TheDestroyerTail],
                      npc.type) > -1)
         {
             LeadingConditionRule leadingConditionRule = new(new Conditions.LegacyHack_IsABoss());
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DestroyerPetItem));
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DestroyerMasterTrophy));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.DestroyerPetItem));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.DestroyerMasterTrophy));
             npcLoot.Add(leadingConditionRule);
         }
         else if (npc.type is NPCID.Retinazer or NPCID.Spazmatism)
         {
             var leadingConditionRule = new LeadingConditionRule(new Conditions.MissingTwin());
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.TwinsPetItem));
-            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.TwinsMasterTrophy));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.TwinsPetItem));
+            leadingConditionRule.OnSuccess(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true),  ItemID.TwinsMasterTrophy));
             npcLoot.Add(leadingConditionRule);
         }
 
         switch (npc.type)
         {
             case NPCID.KingSlime:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.KingSlimePetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.KingSlimeMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.KingSlimePetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.KingSlimeMasterTrophy));
                 break;
             case NPCID.EyeofCthulhu:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EyeOfCthulhuPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EyeofCthulhuMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.EyeOfCthulhuPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.EyeofCthulhuMasterTrophy));
                 break;
             case NPCID.BrainofCthulhu:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.BrainOfCthulhuPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(),
-                    ItemID.BrainofCthulhuMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.BrainOfCthulhuPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.BrainofCthulhuMasterTrophy));
                 break;
             case NPCID.QueenBee:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.QueenBeePetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.QueenBeeMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.QueenBeePetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.QueenBeeMasterTrophy));
                 break;
             case NPCID.SkeletronHead:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.SkeletronPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.SkeletronMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.SkeletronPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.SkeletronMasterTrophy));
                 break;
             case NPCID.Deerclops:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DeerclopsPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DeerclopsMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true), ItemID.DeerclopsPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.DeerclopsMasterTrophy));
                 break;
             case NPCID.WallofFlesh:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.WallofFleshMasterTrophy));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.WallOfFleshGoatMountItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true),  ItemID.WallofFleshMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForMount: true), ItemID.WallOfFleshGoatMountItem));
                 break;
             case NPCID.QueenSlimeBoss:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.QueenSlimePetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.QueenSlimeMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.QueenSlimePetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.QueenSlimeMasterTrophy));
                 break;
             case NPCID.TheDestroyer:
                 break;
             case NPCID.SkeletronPrime:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.SkeletronPrimePetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(),
-                    ItemID.SkeletronPrimeMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.SkeletronPrimePetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.SkeletronPrimeMasterTrophy));
                 break;
             case NPCID.Plantera:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.PlanteraPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.PlanteraMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.PlanteraPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.PlanteraMasterTrophy));
                 break;
+            // 光之女皇
             case NPCID.HallowBoss:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.FairyQueenPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.FairyQueenMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForLightPet: true),  ItemID.FairyQueenPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.FairyQueenMasterTrophy));
                 break;
+            // 石巨人
             case NPCID.Golem:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.GolemPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.GolemMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForLightPet: true),  ItemID.GolemPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.GolemMasterTrophy));
                 break;
             case NPCID.DukeFishron:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DukeFishronPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DukeFishronMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.DukeFishronPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.DukeFishronMasterTrophy));
                 break;
             case NPCID.CultistBoss:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.LunaticCultistPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(),
-                    ItemID.LunaticCultistMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.LunaticCultistPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.LunaticCultistMasterTrophy));
                 break;
             case NPCID.MoonLordCore:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.MoonLordPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.MoonLordMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.MoonLordPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.MoonLordMasterTrophy));
                 break;
             case NPCID.DD2DarkMageT1:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DarkMageBookMountItem, 4));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForMount: true), ItemID.DarkMageBookMountItem, 4));
                 break;
             case NPCID.DD2DarkMageT3:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DarkMageBookMountItem, 4));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DarkMageMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForMount: true), ItemID.DarkMageBookMountItem, 4));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.DarkMageMasterTrophy));
                 break;
             case NPCID.DD2OgreT3:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DD2OgrePetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.OgreMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.DD2OgrePetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.OgreMasterTrophy));
                 break;
             case NPCID.DD2Betsy:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.DD2BetsyPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.BetsyMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.DD2BetsyPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.BetsyMasterTrophy));
                 break;
             case NPCID.MourningWood:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.MourningWoodMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.MourningWoodMasterTrophy));
                 npcLoot.Add(ItemDropRule.ByCondition(
                     new VariableDropRateCondition(0.0625, 0.25),
                     ItemID.SpookyWoodMountItem
                 ));
                 break;
+            // 南瓜王
             case NPCID.Pumpking:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.PumpkingPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.PumpkingMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForLightPet: true),  ItemID.PumpkingPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.PumpkingMasterTrophy));
                 break;
             case NPCID.Everscream:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EverscreamPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.EverscreamMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.EverscreamPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.EverscreamMasterTrophy));
                 break;
             case NPCID.IceQueen:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.IceQueenPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.IceQueenMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.IceQueenPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.IceQueenMasterTrophy));
                 break;
             case NPCID.SantaNK1:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.SantankMountItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.SantankMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForMount: true), ItemID.SantankMountItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.SantankMasterTrophy));
                 break;
             case NPCID.PirateShip:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(),
-                    ItemID.FlyingDutchmanMasterTrophy));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.PirateShipMountItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.FlyingDutchmanMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForMount: true), ItemID.PirateShipMountItem));
                 break;
             case NPCID.MartianSaucerCore:
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.MartianPetItem));
-                npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), ItemID.UFOMasterTrophy));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForPet: true),  ItemID.MartianPetItem));
+                npcLoot.Add(ItemDropRule.ByCondition(new NotMasterModeDropCondition(isForRelic: true), ItemID.UFOMasterTrophy));
                 break;
         }
     }

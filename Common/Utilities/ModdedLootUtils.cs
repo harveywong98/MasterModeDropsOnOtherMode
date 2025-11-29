@@ -18,27 +18,40 @@ public static class ModdedLootUtils
 
         return false;
     }
-
-    public static void AddModItemDrop(NPCLoot npcLoot, Mod mod, string itemName, int chanceDenominator = 1)
+    
+    public enum DropType
     {
-        if (mod.TryFind<ModItem>(itemName, out var item))
-            npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), item.Type, chanceDenominator));
+        Pet,
+        LightPet,
+        Accessory,
+        Mount,
+        Relic,
     }
 
-    public static void AddModItemDrop(IItemDropRule rule, Mod mod, string itemName, int chanceDenominator = 1)
+    public static void AddModItemDrop(NPCLoot npcLoot, Mod mod, string itemName, DropType dropType, int chanceDenominator = 1)
     {
-        if (mod.TryFind<ModItem>(itemName, out var item))
-            rule.OnSuccess(ItemDropRule.ByCondition(new Conditions.NotMasterMode(), item.Type, chanceDenominator));
-    }
-
-    public static void AddPairedBossLoot(NPCLoot npcLoot, Mod mod, int partnerNpcId, string petItemName,
-        string relicItemName)
-    {
-        var rule = new LeadingConditionRule(new PartnerDownCondition(partnerNpcId));
-
-        AddModItemDrop(rule, mod, petItemName, 4);
-        AddModItemDrop(rule, mod, relicItemName);
-
-        npcLoot.Add(rule);
+        if (!mod.TryFind<ModItem>(itemName, out var item)) return;
+        IItemDropRuleCondition condition;
+        switch (dropType)
+        {
+            case DropType.Pet:
+                condition = new NotMasterModeDropCondition(isForPet: true);
+                break;
+            case DropType.LightPet:
+                condition = new NotMasterModeDropCondition(isForLightPet: true);
+                break;
+            case DropType.Accessory:
+                condition = new NotMasterModeDropCondition(isForAccessory: true);
+                break;
+            case DropType.Mount:
+                condition = new NotMasterModeDropCondition(isForMount: true);
+                break;
+            case DropType.Relic:
+                condition = new NotMasterModeDropCondition(isForRelic: true);
+                break;
+            default:
+                return;
+        }
+        npcLoot.Add(ItemDropRule.ByCondition(condition, item.Type, chanceDenominator));
     }
 }

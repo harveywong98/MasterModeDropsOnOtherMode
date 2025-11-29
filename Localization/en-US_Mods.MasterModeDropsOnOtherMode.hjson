@@ -5,6 +5,7 @@ Configs: {
 		Headers: {
 			VanillaBossDrops: Vanilla Boss Drops Header
 			ModdedBossDrops: Modded Boss Drops Header
+			DropCategories: Drop Categories Header
 		}
 
 		EnableVanillaBossDrops: {
@@ -20,6 +21,31 @@ Configs: {
 		EnableRedemptionDrops: {
 			Label: Enable Redemption Drops
 			Tooltip: A specific toggle for Redemption mod drops. Requires the master toggle above to be enabled.
+		}
+
+		DropPets: {
+			Label: Enable Pet Drops
+			Tooltip: If true, bosses will drop their master mode exclusive pets in other modes.
+		}
+
+		DropMounts: {
+			Label: Enable Mount Drops
+			Tooltip: If true, bosses will drop their master mode exclusive mounts in other modes.
+		}
+
+		DropRelics: {
+			Label: Enable Relic Drops
+			Tooltip: If true, bosses will drop their master mode exclusive relics in other modes.
+		}
+
+		DropLightPets: {
+			Label: Enable Light Pet Drops
+			Tooltip: If true, bosses will drop their master mode exclusive light pets in other modes.
+		}
+
+		DropAccessory: {
+			Label: Enable Accessory Drops
+			Tooltip: If true, bosses will drop their master mode exclusive accessory in other modes.
 		}
 	}
 }
