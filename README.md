@@ -22,6 +22,8 @@ This mod currently adds Master Mode drops for the following content:
 This mod theoretically compatible with most other mods.
 
 ## Changelog
+- **1.1.8**
+    - Config menu added.
 - **1.1.7**
   - Secrets Of The Shadows mod (v0.25.0.4) support.
 - **1.1.5** 
